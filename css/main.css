@@ -37,13 +37,9 @@ blockquote {
 
 /*section {
     width: 100%;
-    height: 100%;
-    flex: 1;
-    display: flex;
-    text-align: center;
+    height: 100vh;
     position: relative;
-    overflow: hidden;
-    background-color: #000;*/
+    overflow: hidden;*/
  
 body {
     text-align: left;
@@ -140,7 +136,8 @@ ul {
     min-height:656px;
     text-align: left;    
     display:flex;
-    justify-content:center;
+    flex-direction: row;
+    /*justify-content:center;*/
     align-items: center;
     margin: 0 auto;
 }
@@ -166,13 +163,13 @@ ul {
   #homepage .blurb {
     padding: 0px;
     width: 27vw;
-    top: 39%;
+    /*top: 39%;*/
     }
 
   #homepage .textBox {
-  height: 15vh;
-  overflow: hidden;
-}
+    height: 15vh;
+    overflow: hidden;
+    }
 
 
 #liturgical {
@@ -180,9 +177,11 @@ ul {
     background-position: top left;
     background-size: 116%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
   #liturgical .content {
     display:flex;
+    flex-direction: row;
     justify-content: flex-start;
     }
 
@@ -193,7 +192,7 @@ ul {
 
   #liturgical .blurb {
     padding: 1.5vh 1.5vw;
-    width: 27vw;
+    width: 35vw;
     background-color: rgba(0,0,0,.5);
     color: white;
     }
@@ -202,12 +201,37 @@ ul {
     background-color: #8b00a5;
 }
 
+  #lordsprayer .blurb {
+      position: absolute;
+      padding: 17px;
+      float: left;
+      width: 39vw;
+      display:block;
+      background-color: rgba(0,0,0,.5);
+      color: white;
+      border-radius: 7px;
+      /*clear:both;*/
+  }
+
+  #lordsprayer .textBox {
+    height: 15vh;
+    overflow: hidden;
+    }
+
+  #lordsprayer .content {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    }
+
 .blurbPhoto {
-    float: left;
-    max-width:500px; 
+    float: right;
+    max-width:500px;
+    min-width: 400px; 
     height: auto;
     border-radius: 7px;
     margin-left: 30px;
+    display:block;
 }
 
 .contactForm {
@@ -221,24 +245,74 @@ ul {
 #rosary {
     background-image: url(../images/475663144.jpg);
     background-size: cover;
-    background-position: left 2%;
+    background-attachment: fixed;
     background-repeat: no-repeat;   
 }
+
+  #rosary .blurb {
+    position: absolute;
+      padding: 17px;
+      float: left;
+      width: 39vw;
+      display:block;
+      background-color: rgba(0,0,0,.5);
+      color: white;
+      border-radius: 7px;
+    }
+
+  #rosary .textBox {
+    height: 15vh;
+    overflow: hidden;
+    }
+
+  #rosary .content {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    }
 
 #testimonial {
   background-color: #f3ce07;  
 }
 
+#testimonia .blurb {
+    position: absolute;
+      padding: 17px;
+      float: left;
+      width: 39vw;
+      display:block;
+      background-color: rgba(0,0,0,.5);
+      color: white;
+      border-radius: 7px;
+    }
+
+  #testimonia .textBox {
+    height: 15vh;
+    overflow: hidden;
+    }
+
+  #testimonial .content {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    }
+
 #michele {
     background-image: url(../images/DSC_2692.JPG);
     background-size: cover;
     background-position: bottom left;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;   
+    background-attachment: fixed; 
 }
 
   #michele .blurb {
     width:32%;
     margin-top: 100px;
+  }
+
+  #michele .textBox {
+    height: 15vh;
+    overflow: hidden;
   }
 
   #michele .content {
@@ -247,23 +321,32 @@ ul {
   }
 
 #events {
-    /*background-image: url(../images/DSC_2613.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom left;*/
-    background-color: #35cc35;
+  /*background-image: url(../images/DSC_2613.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;*/
+  background-color: #35cc35;
+}
+  #events .blurb {
+    padding: 17px;
+    float: left;
+    width: 39%;
+    display:block;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    border-radius: 7px;
+    /*clear:both;*/
 }
 
 #contact {
-    background-color: magenta;
+  background-color: #FAF7F5;
 }
 
 .more {
   float: right;
   text-align: right;
   color: inherit;
-  font-size: 1rem;
-  
+  font-size: 1rem;  
 }
 
 .more a, a:visited {
@@ -419,59 +502,56 @@ ul {
 
 
 .copyright {
-    font-size: .8rem;
-    color: #000;
-    margin: 0;
+  font-size: .8rem;
+  color: #000;
+  margin: 0;
 }
 
 .bgImage {
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; 
   background-size: cover;
-  height: 100%;
+  background-repeat: no-repeat;
   width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 500;
+  opacity: 0.4;
 }
 
-/*data-center="background-position: 50% 0px;"
-data-top-bottom="background-position: 50% -100px;"
-data-bottom-top="background-position: 50% 100px;"
-data-anchor-target="#slide-2"*/
-
 /*media queries*/
-/*
+
 @media screen and (max-width: 1168px) {
   html {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1068px) {
-#homepage {
-  background-position: 121% -6%;
+  #homepage {
+    background-position: 121% -6%;
+    }
+
+  .blurbPhoto {
+    max-width:30%;
+    height: auto;
   }
-
-
-.blurbPhoto {
-  max-width:30%;
-  height: auto;
-}
 }
 
 @media screen and (max-width: 915px) {
-html {
-  font-size: 17px;
-  }
+  html {
+    font-size: 17px;
+    }
 
-#homepage {
-  background-position: 121% -6%;
+  #homepage {
+    background-position: 121% -6%;
+    }
+  .nav-south {
+      display: none;
+    }
+  .hamburger {
+    background-image: url(../images/rosary_hamburger.png);
+    }
   }
-.nav-south {
-    display: none;
-  }
-.hamburger {
-  background-image: url(../images/rosary_hamburger.png);
-  }
-}
 
 @media screen and (max-width: 768px) {
   html {
@@ -480,11 +560,11 @@ html {
   .tagline {
     clear: both;
   }
-  #liturgical .blurbOnDark {
+  #liturgical .blurb {
     width:60%;
     clear:both;
   }
 }
-*/
+
 
 
