@@ -1,3 +1,9 @@
+/*font-family: 'Lily Script One', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+font-family: 'Cherry Swash', cursive;
+font-family: 'UnifrakturCook', cursive;
+font-family: 'Galada', cursive;*/
+
 html {
     box-sizing: border-box;
     font-size: 20px;
@@ -47,31 +53,36 @@ p {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    margin-bottom: 0;
    
 }
 
 a,
 a:visited {
   text-decoration: none;  
+  color:inherit;
 }
 
 header {
   display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top:18px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 31px;
+  position: absolute;
 }
 
 h1 {
-    font-family: 'Abril Fatface', Times, cursive;
-    font-weight: 700;
-    font-size: 2.3rem;
+    font-family: 'Galada', cursive;
+    font-weight: 400;
+    font-size: 2.8rem;
     padding: 0 16px 0px 0px;
-    color: #da0808;
-    float:left;
-    margin:0;
-    display:block;
-    text-shadow: 0px 0px 15px #ffffff;
+    color: #ffffff;
+    letter-spacing: 2px;
+    float: left;
+    margin: 0;
+    display: block;
+    line-height:3.2rem;
+    /*text-shadow: 0px 0px 15px #ffffff;*/
 }
 
 .tagline {
@@ -81,7 +92,18 @@ h1 {
     font-size: 1.3rem;
     float: left;
     margin:0;
-    text-shadow: 0px 0px 15px #000000;
+    text-shadow: 0px 0px 7.5px #000000;
+}
+
+.banner {
+    font-family: 'Galada', cursive;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    letter-spacing: 3px;
+    margin: 50px 0;
+    /*text-shadow: 0 0 17px #b4c4ff;*/
 }
 
 h2 {
@@ -90,6 +112,11 @@ h2 {
     font-size: 1.3rem;
     margin: 0;
     line-height: 1.7rem;
+}
+
+h5 {
+  font-size: 1.03em;
+  margin: 0.67em 0;
 }
 
 .subhead {
@@ -106,22 +133,102 @@ h2 {
 
 .textBox {
   position: relative;
-  /*height: 18vh;*/
+  border-left: 2px solid;
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom:30px;
+  max-width:600px;
+  /*margin-top: 212px;*/
+  
+}
+
+.textBox .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
 }
 
 ul {
-  type:square;
-  margin:0;
+  margin:3px;
 }
 
 figure {
   display:block;
+}
+.twoCol {
+    display: flex;
+    margin: 9vh auto 0vh auto;
+    /*width: 66vw;*/
+}
+
+.formLabel {
+  font-weight:bold;
+}
+
+.formContainer {
+  
+}
+
+label {
+
+}
+
+input {
+  line-height: normal;
+  border-radius: 5px;
+  height: 30px;
+}
+
+textarea {
+border-radius: 5px;
+}
+
+/*--- horizontal &quot;block&quot; menu ---*/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 900; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #fff; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a, a:visited {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #cccccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #da0808;
+    font-weight: bold;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
 }
  
 /* container - place inside each section or around the entire page depending on your layout */
 .site {
     max-width: 1366px;
     margin: 0 auto;
+    background-color: maroon;
 }
 
 .container {
@@ -129,7 +236,7 @@ figure {
     margin: 0 auto;
     text-align: left;
     min-height: 656px;
-    padding: 10px 91px;
+    padding: 0 40px;
 }
 
 .content {
@@ -137,7 +244,7 @@ figure {
     text-align: left;    
     display:flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
     min-height: inherit;
 }
@@ -145,7 +252,8 @@ figure {
 .more {
   float: right;
   text-align: right;
-  font-size: 1rem;  
+  font-size: 1rem; 
+  margin: 10px 20px 0 20px; 
 }
 
 .more a, a:visited {
@@ -159,21 +267,19 @@ figure {
 }
 .blurbPhoto {
     float: right;
-    max-width:50vw; 
+    max-width: 40vw;
     height: auto;
     border-radius: 7px;
-    margin-left: 30px;
-    display:block;
+    margin: 20px 30px;
+    display: block;
 }
 
 .blurb {
-    position: absolute;
+    position: relative;
     float: left;
-    width: 40vh;
-    height: auto;
     display: block;
     padding: 1.5vh 1.5vw;
-    border-radius: 7px;
+    border-radius: 15px;
     color: #000;
 }
 
@@ -201,8 +307,6 @@ figure {
 .blurb p {
   clear: both;
   float: left;
-  margin: 0;
-  padding-bottom: 1rem;
 }
 
 .blurb a:hover {
@@ -223,7 +327,7 @@ figure {
 }
 
   #homepage .content {
-    min-height:76vh;
+    /*align-items: center;*/
   }
 
   #homepage .blurb p, a {
@@ -237,14 +341,11 @@ figure {
     }
 
   #homepage .textBox {
-    /*height: 16.6vh;
-    overflow: hidden;*/
-    /*position: absolute;*/
-    width:24vw;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 7px;
+    width: 27vw;
+    border-radius: 15px;
     padding: 17px;
-    margin:20px 0;
+    margin-bottom:30px;
+    margin-top: 212px;
     }
 
     .moreHomepage {
@@ -253,7 +354,7 @@ figure {
 
 
 #liturgical {
-    background-image: url(../images/2014_525_MicheleBeaulieux-10528.jpg);
+    background-image: url(../images/2014_525_MicheleBeaulieux-10528-crop.jpg);
     background-position: top left;
     background-size: 116%;
     background-repeat: no-repeat;
@@ -264,9 +365,12 @@ figure {
     }
 
   #liturgical .textBox {
-    width: 35vw;
-    /*overflow: hidden;*/
+    width: 39vw;
     color: white;
+    margin-top: 34vh;
+    margin-bottom: 10vh;
+    border-radius: 15px;
+    padding: 17px;
     }
 
   #liturgical .blurb {
@@ -289,11 +393,14 @@ figure {
 
   #lordsprayer .blurb {
       position: relative;
-      padding: 17px;
-      float: left;
-      width: 39vw;
-      display:block;
-      color: white;
+    padding: 17px;
+    float: left;
+    /* width: 39vw; */
+    display: block;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* clear: both; */
       /*background-color: rgba(0,0,0,.5);
       
       border-radius: 7px;*/
@@ -301,20 +408,20 @@ figure {
   }
 
   #lordsprayer .blurbPhoto {
-    width:45%;
+    /*width:45%;*/
     height:auto;
   }
 
   #lordsprayer .textBox {
     color: white;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 7px;
+    /* background-color: rgba(255,255,255,0.3); */
+    /* border-radius: 7px; */
     padding: 17px;
-    margin:20px 0;
+    /* margin: 20px 0; */
     }
 
   #lordsprayer .content {
-    justify-content: space-around;
+    align-items: center;
     }
 
     .moreLord {
@@ -322,11 +429,10 @@ figure {
     }
 
 .contactForm {
-    float: left;
-    min-width:500px; 
+    float: left; 
     height: auto;
-    border-radius: 7px;
     margin-left: 20px;
+    border:none;
 }
 
 #rosary {
@@ -337,22 +443,19 @@ figure {
 }
 
   #rosary .blurb {
-    position: absolute;
-      padding: 17px;
-      float: left;
-      width: 39vw;
-      display:block;
-      background-color: rgba(0,0,0,.5);
-      color: white;
-      border-radius: 7px;
+    padding: 17px;
+    float: left;
     }
 
-  #rosary .textBox {
-    width:75vw;
-    background-color: rgba(0,0,0,.5);
-    color: white;
+ #rosary .textBox {
+    width: 55vw;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
     border-radius: 7px;
-    padding: 17px;
+    padding: 20px;
+    margin-top: 5vh;
+    border: none;
+    float: left;
     }
 
   #rosary .content {
@@ -360,8 +463,13 @@ figure {
     }
 
   #rosary .blurbPhoto {
-    max-width:500px;
-    height:auto;
+    max-width: 500px;
+    float: none;
+    margin: 4vh auto;
+  }
+
+  #rosary .caption {
+    color:black;
   }
 
   .moreRosary {
@@ -369,7 +477,7 @@ figure {
   }
 
 #testimonial {
-  background-image: url(../images/dark-choco-silk.jpg);
+  background-image: url(../images/green-silk.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;   
@@ -387,7 +495,7 @@ figure {
         }
 
   #testimonial .textBox {
-    
+    max-width:1000px;
     }
 
   #testimonial .content {
@@ -410,10 +518,15 @@ figure {
       max-width:35vw;
     }
 
+    #testimonial .more {
+      float:left;
+      padding-left:20x;
+    }
+
 #michele {
-    background-image: url(../images/DSC_2692.JPG);
+    background-image: url(../images/michele_crop.jpg);
     background-size: cover;
-    background-position: bottom left;
+    background-position: bottom center;
     background-repeat: no-repeat;   
     background-attachment: fixed; 
 }
@@ -424,32 +537,27 @@ figure {
   }
 
   #michele .textBox {
-    width: 50vw;
+    max-width: 684px;
     color: white;
     background-color: rgba(0,0,0,.5);
     color: white;
     border-radius: 7px;
     padding: 17px;
-    margin: 0 auto;
-    top:26vh;
+    margin: 60vh auto 5vh auto;
+    border: none;
     }
-  }
-
-  #michele .content {
-    justify-content: flex-start;
-  }
 
   .moreMichele {
     display:none;
-    width: 60vw;
   }
 
 #events {
-  /*background-image: url(../images/DSC_2613.JPG);
+  background-image: url(../images/fire-walk.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;*/
-  background-color: #35cc35;
+  background-position: bottom left;
+  background-attachment: fixed;
+  background-color: #1392a7;
 }
   #events .blurb {
     padding: 17px;
@@ -457,64 +565,59 @@ figure {
     width: 39%;
     display:block;
     background-color: rgba(0,0,0,.5);
-    color: white;
+    color: black;
     border-radius: 7px;
     /*clear:both;*/
-}
+  }
+  #events .container {
+    background-color: rgba(98, 30, 172, 0.82);
+  }
+
+  #events .textBox {
+    color: #f1ff18;
+    width: 100%;
+    border-color: #f1ff18;
+  }
+
+  #events a, a:visited {
+    color: inherit;
+  }
+
+  #events .more {
+    float:left;
+  }
+
+  .moreEvents {
+    display:none;
+  }
+
+  #events .caption {
+    color:inherit;
+  }
 
 #contact {
-  background-color: #FAF7F5;
+  background-image: url(../images/grey-silk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
 }
 
   #contact .content {
-    background-position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width:90%;
+  }
+
+  #contact .textBox {
+    color: #10109e;
+    border-color: inherit;
+    margin-top: 11vh;
   }
 
 
-
-#pastEvents {
-  display:none;
-  width: 50%;
-}
  
-/*--- horizontal &quot;block&quot; menu ---*/
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 900; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #da0808; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
 
-/* The navigation menu links */
-.sidenav a, a:visited {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 22px;
-    color: #cccccc;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #ffffff;
-    font-weight: bold;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 40px;
-    margin-left: 50px;
-}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -538,25 +641,21 @@ figure {
 }
 
 .hamburger {
-  display: inline-block;
-  width: 68px;
-  height: 68px;
-  background-image: url(../images/rosary_menu.png);
-  background-size: 68px 68px;
+  display: none;
+  width: 35px;
+  height: 35px;
+  background-image: url(../images/hamburger_rev.png);
+  background-size: 80%;
   background-repeat: no-repeat;
   text-indent: -9999px;
   overflow: hidden;
   position: fixed;
   z-index: 700;
   top: 27px;
-  left: 10px;
+  left: 27px;
   padding: inherit;
   float: left;
 }
-
-
-/*--- content section - put whatever you want here ---*/
-
 
  
 /*--- footer section - put whatever you want here ---*/
@@ -574,7 +673,6 @@ figure {
   justify-content: space-around;
 }
 
-
 .copyright {
   font-size: 0.7rem;
   color: #000;
@@ -583,61 +681,64 @@ figure {
   margin-right: 40px;
 }
 
-/*.bgImage {
-  background-position: center center;
-  background-attachment: fixed; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 500;
-  opacity: 0.4;
-}*/
 
 /*media queries*/
 
 @media screen and (max-width: 1168px) {
+  
   html {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 1068px) {
-  #homepage {
-    /*background-position: 121% -6%;*/
-    }
 
-  /*.blurbPhoto {
-    max-width:30vw;
-    height: auto;
-    margin-left: 30px;
-  }*/
+@media screen and (max-width: 1068px) {
+  
 }
 
 @media screen and (max-width: 915px) {
+  
   html {
     font-size: 17px;
     }
 
-  #homepage {
-    /*background-position: 121% -6%;*/
+    .container {
+      padding: 0 20px;
     }
 
-  #homepage .textbox {
-    width:76vw;
-    color:green;
-  }
+    header {
+      margin-top: 18px;
+      margin-left: 46px;
+    }
+
+    ul {
+      padding: 0 15px;
+    }
+
+  #homepage {
+    background-position: top right;
+    }
+
   .nav-south {
       display: none;
     }
   .hamburger {
-    background-image: url(../images/rosary_hamburger.png);
+    display:block;
     }
+  
+  #contact .content {
+    flex-direction: column;
+    flex-wrap:wrap;
   }
 
 @media screen and (max-width: 768px) {
   html {
   font-size: 16px;
+  }
+
+  #homepage .textBox {
+    width: 49vw;
+    background-color: rgba(255,255,255,0.7);
+    border:none;
   }
   .tagline {
     clear: both;
@@ -646,7 +747,61 @@ figure {
     width:60%;
     clear:both;
   }
+
+  #testimonial .blurbPhoto {
+    float: none;
+    margin: 13px auto;
+    max-width: 100%;
+  }
+
+  h1 {
+    text-shadow: 0px 0px 8px #000000;
+  }
 }
 
+@media screen and (max-width: 568px) {
+  h2 {
+    font-size: 1.1rem;
+  }
 
+  #rosary .textbox {
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 451px) {
+
+  #homepage {
+      background-position: bottom right;
+      }
+  #homepage .textBox {
+    width:100%;
+    margin-top:54vh;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .hamburger {
+    left:14px;
+  }
+
+  #homepage .textbox {
+    background-color: rgba(255,255,255,0.8);
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  #homepage {
+    
+  }
+}
 

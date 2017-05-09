@@ -14,11 +14,21 @@ $(".js-hamburger").on("click", function(){
         openNav();
 });
 
+$(".js-hamburger").on("mouseover", function(){
+        event.preventDefault();
+        openNav();
+});
 
 $(".sidenav .closebtn").on("click", function(){
 	event.preventDefault();
 	closeNav();
 });
+
+// $(".sidenav a").on("click", function(){
+// 	closeNav();
+// });
+
+
 
 $(".sidenav").on("mouseleave", function(){
  		closeNav();
@@ -32,26 +42,41 @@ $(".sidenav").on("mouseleave", function(){
 
 $("#homepage .more").on("click", function(){
 	event.preventDefault();
-	$(".moreHomepage").show();
+	$(".moreHomepage").toggle();
+
 	
 });
 
 $("#liturgical .more").on("click", function(){
 	event.preventDefault();
-	$(".moreLit").show();
+	$(".moreLit").toggle();
+});
+
+$("#lordsprayer .more").on("click", function(){
+	event.preventDefault();
+	$(".moreLord").toggle();
 });
 
 $("#rosary .more").on("click", function(){
 	event.preventDefault();
-	$(".moreRosary").show();
+	$(".moreRosary").toggle();
 });
 
 $("#testimonial .more").on("click", function(){
 	event.preventDefault();
-	$(".moreTest").show();
+	$(".moreTest").toggle();
 });
 
 $("#michele .more").on("click", function(){
 	event.preventDefault();
-	$(".moreMichele").show();
+	$(".moreMichele").toggle();
 });
+
+
+$("#events .more").on("click", function(){
+	event.preventDefault();
+	$(".moreEvents").toggle();
+});
+
+
+
