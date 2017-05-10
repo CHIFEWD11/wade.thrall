@@ -14,37 +14,19 @@ $(".js-hamburger").on("click", function(){
         openNav();
 });
 
-$(".js-hamburger").on("mouseover", function(){
-        event.preventDefault();
-        openNav();
-});
-
 $(".sidenav .closebtn").on("click", function(){
 	event.preventDefault();
 	closeNav();
 });
-
-// $(".sidenav a").on("click", function(){
-// 	closeNav();
-// });
-
 
 
 $(".sidenav").on("mouseleave", function(){
  		closeNav();
 });
 
-// $(".more").on("click", function(){
-// 	event.preventDefault();
-// 	$(".textBox").css({height: 'auto', overflow: 'auto'});
-	
-// });
-
 $("#homepage .more").on("click", function(){
 	event.preventDefault();
-	$(".moreHomepage").toggle();
-
-	
+	$(".moreHomepage").toggle();	
 });
 
 $("#liturgical .more").on("click", function(){
@@ -53,8 +35,14 @@ $("#liturgical .more").on("click", function(){
 });
 
 $("#lordsprayer .more").on("click", function(){
-	event.preventDefault();
-	$(".moreLord").toggle();
+ 	event.preventDefault();
+ 	$(".moreLord").toggle();
+});
+
+$(".more a").click(function(){
+     $(this).text(function(_, oldText) {
+         return oldText === 'see less' ? 'more' : 'see less';
+     });
 });
 
 $("#rosary .more").on("click", function(){
@@ -78,5 +66,24 @@ $("#events .more").on("click", function(){
 	$(".moreEvents").toggle();
 });
 
+$(".link15").on("click", function(){
+	event.preventDefault();
+	$(".year15").toggle();
+});
+
+$(".link14").on("click", function(){
+	event.preventDefault();
+	$(".year14").toggle();
+});
+
+$(".link13").on("click", function(){
+	event.preventDefault();
+	$(".year13").toggle();
+});
+
+$(".link12").on("click", function(){
+	event.preventDefault();
+	$(".year12").toggle();
+});
 
 
