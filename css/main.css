@@ -172,8 +172,7 @@ ul {
 }
 
 figure {
-  /*max-width: 500px;*/
-  width: 32vw;
+  max-width: 500px;
 }
 
 figcaption {
@@ -277,7 +276,7 @@ max-width: 47vw;
  
 /* container - place inside each section or around the entire page depending on your layout */
 .site {
-    max-width: 1366px;
+    /*max-width: 1366px;*/
     margin: 0 auto;
     background-color: maroon;
 }
@@ -286,12 +285,12 @@ max-width: 47vw;
     width: 100%;
     margin: 0 auto;
     text-align: left;
-    min-height: 656px;
+    min-height: 100vh;
     padding: 0 40px;
 }
 
 .content {
-    width: 100%;
+    max-width: 85vw;
     text-align: left;    
     display:flex;
     flex-direction: row;
@@ -379,10 +378,10 @@ max-width: 47vw;
     /*align-items: center;*/
   }
 
-  #homepage .blurb p, a {
+ /* #homepage .blurb p, a {
     color: #000;
     }
-
+*/
   #homepage .blurb {
     padding: 0px;
     width: 24vw;
@@ -392,9 +391,8 @@ max-width: 47vw;
   #homepage .textBox {
     width: 27vw;
     border-radius: 15px;
-    
     margin-bottom:30px;
-    margin-top: 212px;
+    margin-top: 40vh;
     }
 
     #homepage .textBox a {
@@ -464,6 +462,7 @@ max-width: 47vw;
   #lordsprayer .blurbPhoto {
     max-width: 100%;
     text-align: right;
+    margin-top: 30px;
     }
 
   #lordsprayer .textBox {
@@ -550,6 +549,11 @@ max-width: 47vw;
 
   #testimonial .textBox {
     max-width:1000px;
+    text-overflow: ellipsis;
+    }
+
+  #testimonial .textBox a {
+    color: #de8b0b;
     }
 
   #testimonial .content {
@@ -575,7 +579,7 @@ max-width: 47vw;
     }
 
     #testimonial .blurbPhoto {
-      max-width:32vw;
+      max-width:500px;
     }
 
     #testimonial .more {
@@ -643,7 +647,7 @@ max-width: 47vw;
   }
 
   #events a {
-    color: #02f500;
+    color: #d8b124;
   }
 
   #events .more {
@@ -851,7 +855,7 @@ max-width: 47vw;
 
   #testimonial .blurbPhoto {
     float: none;
-    margin: 13px auto;
+    margin: 1vh auto;
     max-width: 100%;
   }
 
