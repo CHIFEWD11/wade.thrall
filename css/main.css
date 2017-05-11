@@ -185,38 +185,39 @@ figcaption {
     max-width: 66vw;
 }
 
-.formLabel {
-  font-weight:bold;
-}
-
 .formContainer {
   font-size: .9rem;
-}
-
-label {
-
 }
 
 input {
   line-height: normal;
   border-radius: 5px;
   height: 30px;
-  margin: 8px 0;
+ margin: 8px 0;
   padding: 5px;
+  max-width: 47vw;
+  background-color: rgba(23, 35, 34, .15);
+  box-shadow: inset -2px 2px 4px 3px rgba(0,0,0,.15);
+  /*text-shadow: 6px 3px 3px #444;*/
+  color: #444;
   max-width: 47vw;
 }
 
 textarea {
-border-radius: 5px;
-margin:8px 0;
-padding: 5px;
-max-width: 47vw;
+  line-height:normal;
+  border-radius: 5px;
+  margin: 8px 0;
+  padding: 5px;
+  max-width: 47vw;
+  background-color: rgba(23, 35, 34, .15);
+  box-shadow: inset -2px 2px 4px 3px rgba(0,0,0,.15);
+  /*text-shadow: 6px 3px 3px #444;*/
+  color: #444;
 }
 
-.btnSubmit {
-  background color:white;
+input button {
+  box-shadow: inset 0 0 black;
 }
-
 .short_explanation {
   margin: 8px 0;
   font-style:italic;
